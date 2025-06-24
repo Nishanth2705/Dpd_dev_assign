@@ -20,23 +20,23 @@ cd Dpd_dev_assign
 
 
 Dpd_dev_assign/
-├── service_1/ # Go Lang microservice 1
-│ ├── main.go # application code for service 1
-│ └── Dockerfile # Dockerfile to build service 1 image
-│
-├── service_2/ # Flask microservice 2 (similar to service 1)
-│ ├── app.py   # source code 
-│ ├── pyproject.toml 
-│ ├── uv.lock
-│ ├── Dockerfile_advanced # build the image as gunicorn
-│ └── Dockerfile # Dockerfile to build service 2 imagage as simple .py 
-│
-├── nginx/ # Nginx reverse proxy container files
-│ ├── nginx.conf # Nginx configuration for routing and logging
-│ └── Dockerfile # Dockerfile to build nginx image
-│
-├── docker-compose.yml # Compose file to run all services together
-├── test.sh # script to check services are running 
+├── service_1/ # Go Lang microservice 1  
+│   ├── main.go # application code for service 1  
+│   └── Dockerfile # Dockerfile to build service 1 image  
+│  
+├── service_2/ # Flask microservice 2 (similar to service 1)  
+│   ├── app.py   # source code   
+│   ├── pyproject.toml   
+│   ├── uv.lock  
+│   ├── Dockerfile_advanced # build the image as gunicorn  
+│   └── Dockerfile # Dockerfile to build service 2 imagage as simple .py   
+│  
+├── nginx/ # Nginx reverse proxy container files  
+│   ├── nginx.conf # Nginx configuration for routing and logging  
+│   └── Dockerfile # Dockerfile to build nginx image  
+│  
+├── docker-compose.yml # Compose file to run all services together  
+├── test.sh # script to check services are running   
 └── README.md # This documentation file
 
 2.To run the project 
