@@ -1,4 +1,4 @@
-# DevOps Internship Assignment — Dockerized Flask Microservices with Nginx Reverse Proxy
+# DevOps Internship Assignment — Dockerized  GoLang and Flask Microservices with Nginx Reverse Proxy
 
 ## Project Overview
 
