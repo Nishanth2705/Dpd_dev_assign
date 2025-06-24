@@ -1,0 +1,26 @@
+#  Stage 1: Choosing alpine as base image  
+FROM ghcr.io/astral-sh/uv:python3.13-alpine AS builder
+
+
+
+# Setting the working directory
+WORKDIR /app
+
+COPY . .
+
+# creating a virtual env Installing dependencies unicron and gunicorn from .toml
+RUN uv sync
+
+# choosing the base image for final image
+FROM ghcr.io/astral-sh/uv:python3.13-alpine
+#Setting the working directory
+WORKDIR /app
+
+# Copying the files, dependencies from old image to new image
+COPY --from=builder /app /app
+# Setting the environment variable
+ENV PATH="/app/.venv/bin:$PATH"
+#exposing port
+EXPOSE 8002
+# using gunicorn to run the flask as app
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8002"]
