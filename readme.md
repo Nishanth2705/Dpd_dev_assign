@@ -63,3 +63,28 @@ ex.
 4. test script 
 
   this script checks whether the services are running or not there is a delay of 10 secs which give time to container to come up
+
+
+“Now, let me walk you through some of the customizations and additions I implemented in this project to enhance functionality and maintainability.”
+
+🩺 Health Check Script
+
+“I implemented a custom health check script that periodically pings both services to ensure they are running. This script logs the status and helps quickly identify if any service is down.”
+
+📈 Nginx Logging
+
+“In the Nginx container, I’ve set up enhanced logging that includes timestamps and request paths. This helps in monitoring traffic and debugging routing issues effectively.”
+
+🔁 Reverse Proxy Logic
+
+“Requests coming to /service1 are routed to the Go microservice, and /service2 routes to the Flask service. This separation of concerns makes it easier to scale or debug individual services.”
+
+🪶 Lightweight Images
+
+“By compiling the Go service into a binary, I avoided including the full Go SDK, which significantly reduced the image size and improved container startup time.”
+
+🧪 Test Modes for Flask App
+
+“For the Flask app, I created Dockerfiles supporting both development (inbuilt Flask server) and production (Gunicorn + WSGI). This gave me flexibility for local testing as well as deploying to a more production-like environment.”
+
+Overall, this project helped me understand container orchestration using Docker Compose, reverse proxy with Nginx, service health monitoring, and building optimized Docker images. It also taught me how to structure a microservices-based project in a scalable and clean manner.
