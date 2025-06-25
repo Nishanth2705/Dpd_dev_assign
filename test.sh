@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo " Waiting for services to become healthy..."
+echo " Waiting for services delay 10sec..."
 sleep 10  # Allow services time to boot
 
 echo -e "\n Testing /service1/ping:"
